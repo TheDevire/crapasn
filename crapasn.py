@@ -6,6 +6,7 @@ from pyfiglet import Figlet
 import sys
 
 
+# if you want to change the headers go ahead who's stopping you
 headers={
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -46,7 +47,6 @@ else:
         r = requests.get(url, headers=headers)
         response = r.content
         soup = BeautifulSoup(response,'lxml')
-        # finding = soup.find_all('tr')
         new = soup.select("tbody > tr")
         return new
         
