@@ -72,31 +72,7 @@ else:
                     calc = total_len - asn_length
                     asn += calc * " "
                     data_result.append([asn,owner])
-                #     print(f"\t{asn}|\t{owner}  ")
-                #         with open("asn-output",'a')as output:
-                #             i = 0
-                #             while i < 1:
-                #                 output.write(f"{asn} | {owner}\n")
-                #             i += 1
-                #     else:
-                #         print("Added them to 'asn-output' file")
-
-                # else:
-                #     print(f"\t{asn}|\t{owner}  ")
-                        
-
-        # elif len(data) < 50:
-        #     for result in data:
-        #             total_len = 25
-        #             result_list = list(result)
-        #             asn = result_list[1].text.replace("AS","")
-        #             asn_length = len(asn)
-        #             owner = result_list[4].text.upper()
-        #             if (asn_length != 0) and (query.upper() in owner):
-        #                 calc = total_len - asn_length
-        #                 asn += calc * " "
-        #                 print(f"\t{asn}|\t{owner}  ")                
-                    
+                
 
         elif len(data) == 0:
             print("\t \t\t No Result Found!!!")
@@ -170,13 +146,5 @@ else:
                     owner = i[1]       
                     print(f"\t{asn}|\t{owner}  ")
             
-
-
-
-
-        
-
-
-
 
     results(data)
